@@ -28,7 +28,7 @@ else
     <div class="form-group">
         @Html.LabelFor(c => c.Customer.MembershipTypeId)
         @Html.DropDownListFor(c => c.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"),"Select Membership", new { @class = "form-control" })
-        @Html.ValidationMessageFor(c => c.Customer.Name)
+        @Html.ValidationMessageFor(c => c.Customer.MembershipTypeId)
     </div>
     <div class="checkbox">
         <label>@Html.CheckBoxFor(c => c.Customer.IsSubscribedToNewsLetter) Subscribed to Newsletter</label>
@@ -41,4 +41,7 @@ else
 <p>
     @Html.ActionLink("Back To List", "Index")
 </p>
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
 
