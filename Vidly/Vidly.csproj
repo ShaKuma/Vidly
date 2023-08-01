@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
@@ -182,6 +183,10 @@
     <Compile Include="Migrations\202308011531221_ChangeSchemaMovie.Designer.cs">
       <DependentUpon>202308011531221_ChangeSchemaMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202308011744430_NullableDOBCustomer.cs" />
+    <Compile Include="Migrations\202308011744430_NullableDOBCustomer.Designer.cs">
+      <DependentUpon>202308011744430_NullableDOBCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -192,6 +197,7 @@
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\CustomerFormViewModel.cs" />
     <Compile Include="ViewModel\MovieFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -253,6 +259,8 @@
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Movies\MovieForm.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Customers\CustomerForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -276,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202308011531221_ChangeSchemaMovie.resx">
       <DependentUpon>202308011531221_ChangeSchemaMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308011744430_NullableDOBCustomer.resx">
+      <DependentUpon>202308011744430_NullableDOBCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
